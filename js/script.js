@@ -360,6 +360,12 @@ transferSlider.addEventListener('input', e => {
 
     } else {
         elDiagramVult.style.backgroundColor = `#708090`
+        elDiagramBackblaze.style.backgroundColor = `#708090`;
+        elDiagramBunny.style.backgroundColor = `#708090`
+        elDiagramScaleway.style.backgroundColor = `#708090`
+        elDiagramVult.style.backgroundColor = `#708090`
+
+
     }
 })
 
