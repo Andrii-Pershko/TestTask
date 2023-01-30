@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="sliders">
+        <div class="slider-storage">
+          <p>Storege: <b class="data-storege-slider">0</b> GB</p>
+          <input
+            id="storege-control"
+            type="range"
+            min="0"
+            max="1000"
+            step="1"
+            value="0"
+          />
+          <div class="start-end">
+            <p class="start">0</p>
+            <p class="end">1000</p>
+          </div>
+        </div>
+        <div class="slider-transfer">
+          <p>Transfer: <b class="data-transfer-slider">0</b> GB</p>
+          <input
+            id="transfer-control"
+            type="range"
+            min="0"
+            max="1000"
+            step="1"
+            value="0"
+          />
+          <div class="start-end">
+            <p class="start">0</p>
+            <p class="end">1000</p>
+          </div>
+        </div>
+      </section>
+      <section class="competitors">
+        <ul class="company-list">
+          <li class="company-name">backblaze</li>
+          <li class="company-name">
+            <div class="">
+              <p>bunny</p>
+              <p class="chatacteristick">HDD SDD</p>
+            </div>
+          </li>
+          <li class="company-name">
+            <div class="">
+              <p>scaleway</p>
+              <p class="chatacteristick">multi single</p>
+            </div>
+          </li>
+          <li class="company-name">vultr</li>
+        </ul>
+
+        <ul class="competitors__diagram">
+          <li class="diagram diagram_backblaze diagram-backblaze">
+            <p class="price-position price-backblaze">Free</p>
+          </li>
+          <li class="diagram diagram_backblaze diagram-bunny">
+            <p class="price-position price-bunny">Free</p>
+          </li>
+          <li class="diagram diagram_backblaze diagram-scaleway">
+            <p class="price-position price-scalevay">Free</p>
+          </li>
+          <li class="diagram diagram_backblaze diagram-vultr">
+            <p class="price-position price-vultr">Free</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="/js/script.js" type="module"></script>
+  </body>
+</html>
