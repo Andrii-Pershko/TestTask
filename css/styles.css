@@ -308,8 +308,10 @@ input[type="range"]::-moz-range-thumb {
   .competitors {
     margin-bottom: 12px;
     flex-direction: column-reverse;
+    padding-top: 0;
   }
   .company-list {
+    margin-top: -80px;
     width: 90%;
     margin-left: 5%;
     font-size: 22px;
@@ -332,11 +334,12 @@ input[type="range"]::-moz-range-thumb {
   }
 
   .competitors__diagram {
-    transform: rotate(-90deg) translate(45px, -20px);
-    width: 380px;
+    transform: rotate(-90deg) translate(45px, 75px);
+    width: 250px;
     height: 350px;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-right: 0;
     display: block;
   }
   .diagram:nth-child(1) {
@@ -362,5 +365,16 @@ input[type="range"]::-moz-range-thumb {
 
   .bunni-thumb p {
     text-align: center;
+  }
+  .corobka-one {
+    display: flex;
+    padding-left: 25%;
+  }
+  .corobka-two {
+    display: flex;
+    padding-left: 25%;
+  }
+  .slider-transfer {
+    margin-top: 25px;
   }
 }
