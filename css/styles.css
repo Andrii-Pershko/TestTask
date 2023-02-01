@@ -282,11 +282,13 @@ input[type="range"]::-moz-range-thumb {
 
 @media screen and (max-width: 768px) {
   .container {
-    width: 480px;
+    width: 414px;
     padding-left: 8px;
     padding-right: 8px;
     display: flex;
     flex-direction: column-reverse;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .sliders {
@@ -308,8 +310,12 @@ input[type="range"]::-moz-range-thumb {
     flex-direction: column-reverse;
   }
   .company-list {
+    width: 90%;
+    margin-left: 5%;
     font-size: 22px;
     flex-direction: row;
+    justify-content: space-between;
+    margin-right: 0;
   }
   .company-name {
     flex-direction: column-reverse;
@@ -326,11 +332,35 @@ input[type="range"]::-moz-range-thumb {
   }
 
   .competitors__diagram {
-    transform: rotate(-90deg) translate(50px, 50px);
-    width: 300px;
+    transform: rotate(-90deg) translate(45px, -20px);
+    width: 380px;
+    height: 350px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: block;
+  }
+  .diagram:nth-child(1) {
+    margin-top: 5px;
+    margin-bottom: 60px;
+  }
+  .diagram:nth-child(2) {
+    margin-bottom: 48px;
+  }
+  .diagram:nth-child(3) {
+    margin-bottom: 38px;
+  }
+  .diagram:nth-child(4) {
   }
 
   .price-position {
     transform: rotate(90deg);
+  }
+
+  .company-name:last-child {
+    margin-right: 15px;
+  }
+
+  .bunni-thumb p {
+    text-align: center;
   }
 }
