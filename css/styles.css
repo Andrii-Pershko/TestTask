@@ -160,17 +160,16 @@ input[type="range"]::-moz-range-thumb {
 
 .slider-storage {
   width: 500px;
-  font-size: 30px;
 }
 
 .slider-transfer {
   width: 500px;
-  font-size: 30px;
 }
 
 .sliders {
   display: flex;
   justify-content: space-between;
+  font-size: 42px;
 }
 
 .competitors {
@@ -189,6 +188,8 @@ input[type="range"]::-moz-range-thumb {
 
 .company-name {
   text-align: left;
+  display: flex;
+  justify-content: space-between;
 }
 
 .competitors__diagram {
@@ -211,7 +212,15 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .chatacteristick {
-  font-size: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #c1c1c1;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 .competitors__name:first-child {
@@ -223,8 +232,9 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .company-list {
+  padding-top: 5px;
   margin-right: 15px;
-  font-size: 26px;
+  font-size: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -244,6 +254,83 @@ input[type="range"]::-moz-range-thumb {
 
 .price-position {
   position: absolute;
-  right: -50px;
+  right: -55px;
   top: 15px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  align-self: center;
+}
+
+.bunny {
+  margin-right: -8px;
+  width: 50px;
+  height: 50px;
+  align-self: center;
+}
+
+.active {
+  color: #000;
+}
+
+.scalavey-logo {
+  margin-bottom: 7px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 480px;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .sliders {
+    flex-direction: column;
+    font-size: 32px;
+  }
+  .slider-storage {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .slider-transfer {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .competitors {
+    margin-bottom: 12px;
+    flex-direction: column-reverse;
+  }
+  .company-list {
+    font-size: 22px;
+    flex-direction: row;
+  }
+  .company-name {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+  .logo {
+    margin: 0;
+  }
+  .vultr-logo {
+    margin-top: -15px;
+  }
+  .vultrr {
+    margin-top: -20px;
+  }
+
+  .competitors__diagram {
+    transform: rotate(-90deg) translate(50px, 50px);
+    width: 300px;
+  }
+
+  .price-position {
+    transform: rotate(90deg);
+  }
 }
