@@ -34,7 +34,7 @@ const elSsd = document.querySelector('.ssd');
 
 
 // при змінні значень на повзунках міняємо значення діаграм
-storegeSlider.addEventListener('input', e => {
+storegeSlider.addEventListener('input', _.throttle(e => {
     dataSliderStorege.textContent = e.target.value;
     const storegeSliderPosition = Number(e.target.value);
     const transferSliderPosition = Number(dataSliderTransfer.textContent);
@@ -256,9 +256,9 @@ storegeSlider.addEventListener('input', e => {
     }
 
 
-})
+}, 150));
 
-transferSlider.addEventListener('input', e => {
+transferSlider.addEventListener('input', _.throttle(e => {
     dataSliderTransfer.textContent = e.target.value;
     const transferSliderPosition = Number(e.target.value);
     const storegeSliderPosition = Number(dataSliderStorege.textContent);
@@ -473,7 +473,7 @@ transferSlider.addEventListener('input', e => {
     }
 
 
-});
+}, 150));
 
 
 elChatacteristickBunny.addEventListener('click', e => {

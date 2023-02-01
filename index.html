@@ -14,105 +14,114 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <main class="container">
-      <section class="sliders">
-        <div class="slider-storage">
-          <div class="corobka-one">
-            <p>Storege:&nbsp</p>
-            <p><b class="data-storege-slider">0</b> GB</p>
-          </div>
-
-          <input
-            id="storege-control"
-            type="range"
-            min="0"
-            max="1000"
-            step="1"
-            value="0"
-          />
-          <div class="start-end">
-            <p class="start">0</p>
-            <p class="end">1000</p>
-          </div>
-        </div>
-        <div class="slider-transfer">
-          <div class="corobka-two">
-            <p>Transfer:&nbsp</p>
-            <p><b class="data-transfer-slider">0</b> GB</p>
-          </div>
-
-          <input
-            id="transfer-control"
-            type="range"
-            min="0"
-            max="1000"
-            step="1"
-            value="0"
-          />
-          <div class="start-end">
-            <p class="start">0</p>
-            <p class="end">1000</p>
-          </div>
-        </div>
-      </section>
-      <section class="competitors">
-        <ul class="company-list">
-          <li class="company-name">
-            <p>backblaze</p>
-            <svg class="logo backblize-logo">
-              <use href="./img/sprite.svg#icon-backblaze-svgrepo-com"></use>
-            </svg>
-          </li>
-          <li class="company-name">
-            <div class="bunni-thumb">
-              <p>bunny</p>
-              <p class="chatacteristick chatacteristick-bunny">
-                <span class="hdd active">HDD</span> <span class="ssd">SDD</span>
-              </p>
+    <main>
+      <div class="container">
+        <section class="sliders">
+          <div class="slider-storage">
+            <div class="corobka-one">
+              <p>Storege:&nbsp</p>
+              <p><b class="data-storege-slider">0</b> GB</p>
             </div>
-            <img
-              class="bunny"
-              width="45"
-              src="./img/310213724_596094838913527_7273302277921969525_n.png"
-              alt=""
+
+            <input
+              id="storege-control"
+              type="range"
+              min="0"
+              max="1000"
+              step="1"
+              value="0"
             />
-          </li>
-          <li class="company-name">
-            <div class="">
-              <p>scaleway</p>
-              <p class="chatacteristick chatacteristick-scalawey">
-                <span class="multi">multi</span>
-                <span class="single active">single</span>
-              </p>
+            <div class="start-end">
+              <p class="start">0</p>
+              <p class="end">1000</p>
             </div>
-            <svg class="logo scalavey-logo">
-              <use href="./img/sprite.svg#icon-svgviewer-output"></use>
-            </svg>
-          </li>
-          <li class="company-name">
-            <p class="vultrr">vultr</p>
-            <svg class="logo vultr-logo">
-              <use href="./img/sprite.svg#icon-vultr-seeklogocom"></use>
-            </svg>
-          </li>
-        </ul>
+          </div>
+          <div class="slider-transfer">
+            <div class="corobka-two">
+              <p>Transfer:&nbsp</p>
+              <p><b class="data-transfer-slider">0</b> GB</p>
+            </div>
 
-        <ul class="competitors__diagram">
-          <li class="diagram diagram_backblaze diagram-backblaze">
-            <p class="price-position price-backblaze">Free</p>
-          </li>
-          <li class="diagram diagram_backblaze diagram-bunny">
-            <p class="price-position price-bunny">Free</p>
-          </li>
-          <li class="diagram diagram_backblaze diagram-scaleway">
-            <p class="price-position price-scalevay">Free</p>
-          </li>
-          <li class="diagram diagram_backblaze diagram-vultr">
-            <p class="price-position price-vultr">Free</p>
-          </li>
-        </ul>
-      </section>
+            <input
+              id="transfer-control"
+              type="range"
+              min="0"
+              max="1000"
+              step="1"
+              value="0"
+            />
+            <div class="start-end">
+              <p class="start">0</p>
+              <p class="end">1000</p>
+            </div>
+          </div>
+        </section>
+        <section class="competitors">
+          <ul class="company-list">
+            <li class="company-name">
+              <p>backblaze</p>
+              <svg class="logo backblize-logo">
+                <use href="./img/sprite.svg#icon-backblaze-svgrepo-com"></use>
+              </svg>
+            </li>
+            <li class="company-name">
+              <div class="bunni-thumb">
+                <p>bunny</p>
+                <p class="chatacteristick chatacteristick-bunny">
+                  <span class="hdd active">HDD</span>
+                  <span class="ssd">SDD</span>
+                </p>
+              </div>
+              <img
+                class="bunny"
+                width="45"
+                src="./img/310213724_596094838913527_7273302277921969525_n.png"
+                alt=""
+              />
+            </li>
+            <li class="company-name">
+              <div class="">
+                <p>scaleway</p>
+                <p class="chatacteristick chatacteristick-scalawey">
+                  <span class="multi">multi</span>
+                  <span class="single active">single</span>
+                </p>
+              </div>
+              <svg class="logo scalavey-logo">
+                <use href="./img/sprite.svg#icon-svgviewer-output"></use>
+              </svg>
+            </li>
+            <li class="company-name">
+              <p class="vultrr">vultr</p>
+              <svg class="logo vultr-logo">
+                <use href="./img/sprite.svg#icon-vultr-seeklogocom"></use>
+              </svg>
+            </li>
+          </ul>
+
+          <ul class="competitors__diagram">
+            <li class="diagram diagram_backblaze diagram-backblaze">
+              <p class="price-position price-backblaze">Free</p>
+            </li>
+            <li class="diagram diagram_backblaze diagram-bunny">
+              <p class="price-position price-bunny">Free</p>
+            </li>
+            <li class="diagram diagram_backblaze diagram-scaleway">
+              <p class="price-position price-scalevay">Free</p>
+            </li>
+            <li class="diagram diagram_backblaze diagram-vultr">
+              <p class="price-position price-vultr">Free</p>
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
     <script src="./js/script.js" type="module"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>
