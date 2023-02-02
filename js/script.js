@@ -256,7 +256,7 @@ storegeSlider.addEventListener('input', _.throttle(e => {
     }
 
 
-}, 150));
+}, 100));
 
 transferSlider.addEventListener('input', _.throttle(e => {
     dataSliderTransfer.textContent = e.target.value;
@@ -473,7 +473,7 @@ transferSlider.addEventListener('input', _.throttle(e => {
     }
 
 
-}, 150));
+}, 100));
 
 
 elChatacteristickBunny.addEventListener('click', e => {
