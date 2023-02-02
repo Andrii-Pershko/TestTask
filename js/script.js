@@ -620,8 +620,6 @@ elChatacteristickScaleway.addEventListener('click', e => {
     elMulti.classList.toggle('active')
     elSingle.classList.toggle('active')
 
-
-
     if (elSingle.classList.contains('active')) {
         let priceScaleway;
         if (Number(dataSliderStorege.textContent) <= 75 && Number(dataSliderTransfer.textContent) <= 75) {
@@ -661,7 +659,7 @@ elChatacteristickScaleway.addEventListener('click', e => {
         if (elPriceDiagramScaleway.textContent === 'Free') {
             elPriceDiagramScaleway.textContent = 'Free'
         } else {
-            elPriceDiagramScaleway.textContent = `${priceScaleway}$`
+            elPriceDiagramScaleway.textContent = `${priceScaleway.toFixed(2)}$`
         }
 
     };
