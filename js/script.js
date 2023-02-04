@@ -48,8 +48,6 @@ storegeSlider.addEventListener('input', _.throttle(e => {
     const getWidthScaleway = getWidthDiagram('scaleway', 0, 0, priceScaleway);
     const getWidthVultr = getWidthDiagram('vultr', 0, 0, 0, priceVultr)
 
-
-
     // SET WIDTH
     elDiagramBackblaze.style.width = `${2 + getWidthBackblaze}%`;
 
