@@ -32,38 +32,31 @@ const elSsd = document.querySelector('.ssd');
 
 // при змінні значень на повзунках міняємо значення діаграм
 storegeSlider.addEventListener('input', _.throttle(e => {
+
     dataSliderStorege.textContent = e.target.value;
     const storegeSliderPosition = Number(e.target.value);
     const transferSliderPosition = Number(dataSliderTransfer.textContent);
 
     // GET PRICE
-    const priceBackblaze = getPrice('backblaze')
+    const priceBackblaze = getPrice('backblaze');
     const priceBunny = getPrice('banny');
     const priceScaleway = getPrice('scaleway', storegeSliderPosition, transferSliderPosition);
     const priceVultr = priceBunny;
+
+    // SET PRICE 
+    setPrice(priceBackblaze, priceBunny, priceScaleway, priceVultr);
 
     //GET WIDTH
     const getWidthBackblaze = getWidthDiagram('backblaze', priceBackblaze);
     const getWidthBunny = getWidthDiagram('bunny', 0, priceBunny);
     const getWidthScaleway = getWidthDiagram('scaleway', 0, 0, priceScaleway);
-    const getWidthVultr = getWidthDiagram('vultr', 0, 0, 0, priceVultr)
+    const getWidthVultr = getWidthDiagram('vultr', 0, 0, 0, priceVultr);
 
     // SET WIDTH
-    elDiagramBackblaze.style.width = `${2 + getWidthBackblaze}%`;
+    setWidthDiagram(getWidthBackblaze, getWidthBunny, getWidthScaleway, getWidthVultr);
 
-    if (getWidthBunny >= 12.5) {
-        elDiagramBunny.style.width = `${2 + 12.5}%`;
-    } else {
-        elDiagramBunny.style.width = `${2 + getWidthBunny}%`;
-    }
-    elDiagramScaleway.style.width = `${2 + getWidthScaleway}%`;
-
-    elDiagramVult.style.width = `${2 + getWidthVultr}%`;
-
-    // SET PRICE 
-    setPrice(priceBackblaze, priceBunny, priceScaleway, priceVultr);
     //company color
-    getCompanyColor()
+    getCompanyColor();
 
 
 }, 100));
@@ -86,17 +79,7 @@ transferSlider.addEventListener('input', _.throttle(e => {
     const getWidthVultr = getWidthDiagram('vultr', 0, 0, 0, priceVultr)
 
     // SET WIDTH
-    elDiagramBackblaze.style.width = `${2 + getWidthBackblaze}%`;
-
-    if (getWidthBunny >= 12.5) {
-        elDiagramBunny.style.width = `${2 + 12.5}%`;
-    } else {
-        elDiagramBunny.style.width = `${2 + getWidthBunny}%`;
-    }
-    elDiagramScaleway.style.width = `${2 + getWidthScaleway}%`;
-
-    elDiagramVult.style.width = `${2 + getWidthVultr}%`;
-
+    setWidthDiagram(getWidthBackblaze, getWidthBunny, getWidthScaleway, getWidthVultr)
 
     // SET PRICE 
     setPrice(priceBackblaze, priceBunny, priceScaleway, priceVultr);
@@ -283,14 +266,14 @@ function getCompanyColor() {
             };
         };
     }
-}
+};
 
 function setBasicColorDiagram() {
     elDiagramBackblaze.style.backgroundColor = `#708090`;
     elDiagramBunny.style.backgroundColor = `#708090`
     elDiagramScaleway.style.backgroundColor = `#708090`
     elDiagramVult.style.backgroundColor = `#708090`
-}
+};
 
 function getPrice(company, storegeSliderPosition, transferSliderPosition) {
 
@@ -373,7 +356,7 @@ function setPrice(priceBackblaze, priceBunny, priceScaleway, priceVultr) {
     } else {
         elPriceDiagramvultr.textContent = `${priceVultr}$`
     }
-}
+};
 
 function getWidthDiagram(company, priceBackblaze = 0, priceBunny = 0, priceScaleway = 0, priceVultr = 0) {
     if (company === 'backblaze') {
@@ -417,4 +400,17 @@ function getWidthDiagram(company, priceBackblaze = 0, priceBunny = 0, priceScale
     }
 
 
-}
+};
+
+function setWidthDiagram(getWidthBackblaze, getWidthBunny, getWidthScaleway, getWidthVultr) {
+    elDiagramBackblaze.style.width = `${2 + getWidthBackblaze}%`;
+
+    if (getWidthBunny >= 12.5) {
+        elDiagramBunny.style.width = `${2 + 12.5}%`;
+    } else {
+        elDiagramBunny.style.width = `${2 + getWidthBunny}%`;
+    }
+    elDiagramScaleway.style.width = `${2 + getWidthScaleway}%`;
+
+    elDiagramVult.style.width = `${2 + getWidthVultr}%`;
+};
